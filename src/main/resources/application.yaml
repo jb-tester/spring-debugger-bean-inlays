@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active[0]: remote
+    active[1]: common
+logging:
+  level:
+    com: debug
+foo:
+  bar:
+    prop2: default prop2
+    prop1: default prop1
+    condition: 1

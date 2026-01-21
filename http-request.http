@@ -1,0 +1,18 @@
+###
+GET http://localhost:8080/qualified
+
+###
+GET http://localhost:8080/conditional
+
+###
+GET http://localhost:8080/nonambiguous
+
+###
+GET http://localhost:8080/nonambiguous/data
+
+###
+GET http://localhost:8080/
+
+
+
+###
