@@ -1,5 +1,6 @@
 package com.mytests.spring.springdebuggerbeaninlays.nonAmbiguousInjection;
 
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,13 +16,15 @@ public class ControllerWithNonAmbiguousCtorInjection {
     private final MyConfProp myConfProp;
     private final MyDataRepoCtorInjection myDataRepoCtorInjection;
     private final MyDataRepository myDataRepository;
+    private final ApplicationEventPublisher applicationEventPublisher;
 
 
-    public ControllerWithNonAmbiguousCtorInjection(NoProfilesService noProfilesService, MyConfProp myConfProp, MyDataRepoCtorInjection myDataRepoCtorInjection, MyDataRepository myDataRepository) {
+    public ControllerWithNonAmbiguousCtorInjection(NoProfilesService noProfilesService, MyConfProp myConfProp, MyDataRepoCtorInjection myDataRepoCtorInjection, MyDataRepository myDataRepository, ApplicationEventPublisher applicationEventPublisher) {
         this.noProfilesService = noProfilesService;
         this.myConfProp = myConfProp;
         this.myDataRepoCtorInjection = myDataRepoCtorInjection;
         this.myDataRepository = myDataRepository;
+        this.applicationEventPublisher = applicationEventPublisher;
     }
 
     @GetMapping
